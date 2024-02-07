@@ -2,22 +2,25 @@ package ru.alex;
 
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
+import java.util.concurrent.RecursiveTask;
+import java.util.concurrent.atomic.AtomicLong;
 
-public class NumberTaskRunnable implements Runnable {
+public class NumberTask extends RecursiveTask<Long> {
 
     private long begin;
     private long end;
     private final String hashSum;
     private final MessageDigest messageDigest;
 
-    public NumberTaskRunnable(long begin, long end, String hashSum, String algorithm) throws NoSuchAlgorithmException {
+    public NumberTask(long begin, long end, String hashSum, String  algorithm) throws NoSuchAlgorithmException {
         this.begin = begin;
         this.end = end;
         this.hashSum = hashSum;
         this.messageDigest = MessageDigest.getInstance(algorithm);
     }
 
-    public void run() {
+    @Override
+    protected Long compute() {
         long beginTime = System.currentTimeMillis();
         StringBuilder hexString = new StringBuilder();
         while (begin < end) {
@@ -25,9 +28,11 @@ public class NumberTaskRunnable implements Runnable {
                 System.out.println("Number is: " + begin);
                 System.out.println("Thread which find number: " + Thread.currentThread().getName());
                 System.out.println("Time to execute: " + (System.currentTimeMillis() - beginTime));
+                System.exit(0);
             }
             begin = getNumberForSearch(hexString, begin);
         }
+        return begin;
     }
 
     private long getNumberForSearch(StringBuilder hexString, long begin) {

@@ -4,11 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a275c0c2-b97b-4391-97aa-725b31d54860" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/alex/NumberTask.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/alex/NumberTaskRunnable.java" afterDir="false" />
+    <list default="true" id="a275c0c2-b97b-4391-97aa-725b31d54860" name="Changes" comment="One more realization with simple method creating Thread consider of core CPU.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ru/alex/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/alex/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/alex/NumberTaskRunnable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/alex/NumberTask.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -169,8 +168,16 @@
       <workItem from="1707241783809" duration="2075000" />
       <workItem from="1707243906724" duration="1119000" />
       <workItem from="1707296739371" duration="46000" />
-      <workItem from="1707297841580" duration="5721000" />
+      <workItem from="1707297841580" duration="7173000" />
     </task>
+    <task id="LOCAL-00001" summary="One more realization with simple method creating Thread consider of core CPU.">
+      <created>1707327669444</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1707327669444</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -186,5 +193,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="One more realization with simple method creating Thread consider of core CPU." />
+    <option name="LAST_COMMIT_MESSAGE" value="One more realization with simple method creating Thread consider of core CPU." />
   </component>
 </project>
