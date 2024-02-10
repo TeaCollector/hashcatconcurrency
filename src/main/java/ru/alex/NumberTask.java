@@ -23,21 +23,21 @@ public class NumberTask extends RecursiveTask<Long> {
     protected Long compute() {
         long beginTime = System.currentTimeMillis();
         StringBuilder hexString = new StringBuilder();
-        while (begin < end) {
+        while (begin <= end) {
+            begin = getNumberForSearch(hexString, begin);
             if ((hashSum.contentEquals(hexString))) {
                 System.out.println("Number is: " + begin);
                 System.out.println("Thread which find number: " + Thread.currentThread().getName());
-                System.out.println("Time to execute: " + (System.currentTimeMillis() - beginTime));
+                System.out.println("Time to execute: " + (System.currentTimeMillis() - beginTime + "ms"));
                 System.exit(0);
             }
-            begin = getNumberForSearch(hexString, begin);
+            begin++;
         }
         return begin;
     }
 
     private long getNumberForSearch(StringBuilder hexString, long begin) {
         String numberForSearching;
-        begin++;
         hexString.delete(0, hexString.length());
         numberForSearching = Long.toString(begin);
         messageDigest.update(numberForSearching.getBytes());
